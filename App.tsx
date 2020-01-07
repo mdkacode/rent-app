@@ -51,13 +51,14 @@ const AppNavigator = createStackNavigator({
     screen:ProductListing,
     navigationOptions:{
       title:"Rent Product",
-      headerLeft: null,
+       headerLeft: null,
       gesturesEnabled:false
     }
   },
   ProductDescription:{
     screen: ProductDescription,
     navigationOptions:{
+      title:"Rent Product",
       gesturesEnabled:false
     }
   }

@@ -1,6 +1,6 @@
 import React from 'react';
-import {View,Image,ScrollView,BackHandler, ToastAndroid, TouchableHighlight} from 'react-native';
-import { Container, Header, Content, List, ListItem,Card,Item, CardItem,Text, Button,Icon } from 'native-base';
+import {View,Image,ScrollView,BackHandler, ToastAndroid, TouchableHighlight,Text} from 'react-native';
+import { Container, Header, Content, List, ListItem,Card,Item, CardItem, Button,Icon } from 'native-base';
 import  Carousel from "react-native-carousel";
 import {style} from './product-style';
 const dummyData = [
@@ -96,6 +96,8 @@ _onPressButton(props){
     console.log('GET PUSHED');
 console.log(props)
     props.navigation.navigate('ProductDescription');
+    const {setParams} = this.props.navigation;
+    setParams({ title: 'Anrag' })
 }
 
     render(){
@@ -116,14 +118,14 @@ console.log(props)
                         </View>
                         <View>
                         <Text key={id} style={style.productName}> {e.title}</Text>
-                        <Button key={id}  small style={{width:110,backgroundColor:"#ff6090"}}><Text> ₹{e.price} / M</Text></Button>
+                        <Button key={id} onPress={() => this._onPressButton(_this.props)}  small style={{width:210,height:50,backgroundColor:"#000"}}><Text style={{color:"#fff",paddingLeft:15}}>Rent @ ₹{e.price} / M</Text></Button>
                         <Item  key={id} style={{borderColor:"#ffffff00"}}>
                         <Icon key={id} name="paw"  style={style.icon}/>
                         <Text key={id} >{e.distance } away </Text>
                         </Item>
                         <Item  key={id} style={{borderColor:"#ffffff00"}}>
                         
-                        <Icon key={id} name="navigate"  color="#ff6090"  style={style.icon}/>
+                        <Icon key={id} name="navigate"  color="#000"  style={style.icon}/>
                         <Text key={id} style={style.location}>{e.desc } </Text>
                         </Item>
                         

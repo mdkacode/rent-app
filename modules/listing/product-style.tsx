@@ -19,5 +19,5 @@ export  const style = StyleSheet.create({
       location:{
           fontWeight:"bold"
       },
-      icon:{flexDirection:"row",color:"#ff6090",fontSize:15}
+      icon:{flexDirection:"row",color:"#000",fontSize:15}
 })

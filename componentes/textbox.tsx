@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       width: Dimensions.get('window').width -30,
       fontWeight:"bold",
       fontSize: 20,
-      borderColor:'rgba(52, 52, 52, 0.8)'
+      borderColor:'#fff'
     },
     IntextBox:{
         fontWeight:"bold",

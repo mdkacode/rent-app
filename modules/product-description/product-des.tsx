@@ -15,12 +15,8 @@ import Constants from 'expo-constants';
 import SwipeablePanel from "rn-swipeable-panel";
 import {
   Button,
-  Item,
   Icon,
-  Input,
-  List,
   ListItem,
-  Left,
   Right,
   Body,
   Content
